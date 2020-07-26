@@ -3,3 +3,55 @@
     margin-left: 5%;
     padding: 5px 10px;
 }
+
+
+body{
+    background-image:url("../img/faa31cac4aed6ba7cbc93bebd46958e1-medieval-dragons-pattern-design.jpg");
+}
+.cor-fundo{
+background-color:wheat;
+color:black;
+
+
+}
+
+.cor-fundo-ficha{
+background-color: black;
+
+}
+
+.letra-medieval{
+    font-family: 'MedievalSharp', cursive;
+
+}
+
+.center{
+
+    text-align: center;
+}
+
+.left{
+text-align:left;
+
+
+}
+
+.right{
+text-align:right;
+
+}
+
+.vermelho{
+color:tomato;
+
+}
+
+.azul{
+color:royalblue;
+
+}
+
+.bordinha{
+
+    border:4px solid black;
+}

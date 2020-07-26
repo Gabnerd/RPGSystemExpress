@@ -13,23 +13,30 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
     <script src="js/socket.js"></script>
     <script src="lib/jquery.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
     <script src="js/jogadorJs.js"></script>
 </head>
 
-<body>
-    <div class="ficha border rounded">
-        <h2>Nome: <span id="nome"></span></h2>
-        <div class="row">
-            <div class="col-md-6">
-                <p>Vida: <span id="vidaAtual"></span>/<span id="vidaMaximo"></span></p>
-                <p>Mana: <span id="manaAtual"></span>/<span id="manaMaximo"></span></p>
-            </div>
-            <div class="col-md-6">
 
+
+<body>
+    <div class="ficha bordinha rounded cor-fundo letra-medieval">
+        <h1 class="center">Nome: <span id="nome"></span></h1><br><br>
+        <div class="row">
+            <div class="col-md-3 ">
+            </div>
+             <div class="col-md-3">
+                <h2 class="center vermelho">Vida: <span id="vidaAtual"></span>/<span id="vidaMaximo"></span></h2><br>
+                
+             </div>
+            <div class="col-md-3">
+                <h2 class="center azul">Mana: <span id="manaAtual"></span>/<span id="manaMaximo"></span></h2>
+            </div>
+            <div class="col-md-3">
             </div>
         </div>
     </div>
-    <button type="button" id="teste" class="btn btn-primary">Teste</button>
+    <button type="button " id="teste" class="btn btn-primary cor-fundo-ficha">Teste</button>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
