@@ -8,7 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/jogadorPage.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
     <script src="js/socket.js"></script>
@@ -18,29 +19,123 @@
 </head>
 
 
+<!--Divisões-->
 
 <body>
-    <div class="ficha bordinha rounded cor-fundo letra-medieval">
+    <div class="ficha bordinha  cor-fundo letra-medieval">
         <h1 class="center">Nome: <span id="nome"></span></h1><br><br>
+        <div class="row">
+
+            <div class="col-md-4">
+                <h2 class="center vermelho">Vida: <span id="vidaAtual"></span>/<span id="vidaMaximo"></span></h2><br>
+
+            </div>
+            <div class="col-md-4">
+                <h2 class="center azul">Mana: <span id="manaAtual"></span>/<span id="manaMaximo"></span></h2>
+            </div>
+            <div class="col-md-4">
+
+                <h2 class="center azul-escuro">Sanidade: <span id="manaAtual"></span>/<span id="manaMaximo"></span></h2>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="ficha bordinha cor-fundo letra-medieval ">
+        <h1 class="center">Atributos: <span id="nome"></span></h1><br><br>
+        <div class="row ">
+            <div class="col-md-2">
+            </div>
+            <div class="col-md-3 ">
+                <h2 class=" center d-flex justify-content-end">Luta: <span id="vidaAtual"></span>/<span id="vidaMaximo"></span></h2><br>
+                <h2 class=" center d-flex justify-content-end">Movimento: <span id="vidaAtual"></span>/<span id="vidaMaximo"></span></h2><br>
+                <h2 class=" center d-flex justify-content-end">Primeiros S.: <span id="vidaAtual"></span>/<span id="vidaMaximo"></span></h2><br>
+                <h2 class=" center d-flex justify-content-end">Inteligência: <span id="vidaAtual"></span>/<span id="vidaMaximo"></span></h2><br>
+                <h2 class=" center d-flex justify-content-end">Sorte: <span id="vidaAtual"></span>/<span id="vidaMaximo"></span></h2><br>
+            </div>
+            <div class="col-md-3">
+                <h2 class="center d-flex justify-content-end">Força: <span id="manaAtual"></span>/<span id="manaMaximo"></span></h2><br>
+                <h2 class="center d-flex justify-content-end">Destreza: <span id="vidaAtual"></span>/<span id="vidaMaximo"></span></h2><br>
+                <h2 class="center d-flex justify-content-end">Constituição: <span id="vidaAtual"></span>/<span id="vidaMaximo"></span></h2><br>
+                <h2 class="center d-flex justify-content-end">Perspicácia: <span id="vidaAtual"></span>/<span id="vidaMaximo"></span></h2><br>
+            </div>
+            <div class="col-md-4">
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="ficha bordinha cor-fundo letra-medieval">
+        <h1 class="center">Exposição: <span id="nome"></span></h1><br><br>
         <div class="row">
             <div class="col-md-3 ">
             </div>
-             <div class="col-md-3">
-                <h2 class="center vermelho">Vida: <span id="vidaAtual"></span>/<span id="vidaMaximo"></span></h2><br>
-                
-             </div>
             <div class="col-md-3">
-                <h2 class="center azul">Mana: <span id="manaAtual"></span>/<span id="manaMaximo"></span></h2>
+                <h2 class="center">Geral: <span id="vidaAtual"></span>/<span id="vidaMaximo"></span></h2><br>
+
+            </div>
+            <div class="col-md-3">
+                <h2 class=" verde left">Goblin: <span id="manaAtual"></span>/<span id="manaMaximo"></span></h2>
+                <h2 class=" vermelho left">Demonio: <span id="manaAtual"></span>/<span id="manaMaximo"></span></h2>
             </div>
             <div class="col-md-3">
             </div>
         </div>
     </div>
+
+
+    <div class="ficha bordinha-dois cor-fundo">
+        <h1 class="center letra-medieval">Inventário: <span id="nome"></span></h1><br><br>
+
+
+        <table class="table table-dark">
+            <thead>
+                <tr>
+
+                    <th scope="col">
+                        <h2 class="center letra-medieval">Item:</h2>
+                    </th>
+                    <th scope="col">
+                        <h2 class="center letra-medieval">Vatagem/Dano</h2>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <h3 class="center">Espada de Metal</h3>
+                    </td>
+                    <td>
+                        <h3 class="center">D5<h3>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+
+
+
+
+
+
+    </div>
+
+
+
+    <!-- Botao-->
+
+
     <button type="button " id="teste" class="btn btn-primary cor-fundo-ficha">Teste</button>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -1,6 +1,6 @@
 .ficha {
-    width: 90%;
-    margin-left: 5%;
+    width: 70%;
+    margin-left: 15%;
     padding: 5px 10px;
 }
 
@@ -51,7 +51,23 @@ color:royalblue;
 
 }
 
+.verde{
+    color:green;
+    
+    }
+
+.azul-escuro{
+    color:navy;
+    
+    }
+
 .bordinha{
+
+    border:4px solid black;
+    border-bottom:1px;
+}
+
+.bordinha-dois{
 
     border:4px solid black;
 }
