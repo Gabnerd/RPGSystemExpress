@@ -1,11 +1,10 @@
 {
     "jogador1": {
-        "color": "verde",
         "id": 1,
         "nome": "Galrod1",
         "vida": {
             "maximo": 10,
-            "atual": 10
+            "atual": 4
         },
         "mana": {
             "maximo": 1,
@@ -46,7 +45,6 @@
         ]
     },
     "jogador2": {
-        "color": "verde",
         "id": 2,
         "nome": "Galrod2",
         "vida": {
@@ -60,10 +58,7 @@
         "movimento": 11,
         "primeSocor": 20,
         "sanidade": 25,
-        "exposicao": [{
-            "inimigo": "Goblin",
-            "valor": 1
-        }],
+        "exposicao": null,
         "luta": 36,
         "forca": 36,
         "destreza": 60,

@@ -1,4 +1,4 @@
-const fs = require('fs');
+const fs = require('jsonfile');
 var jogadores = require('./data.json');
 
 exports.create = function(req, res) {
@@ -32,8 +32,8 @@ exports.update = function(req, res) {
     if (jogadores["jogador" + id] != null) {
         // update data
         jogadores["jogador" + id] = updatedPlayer;
-
-        // return
+        // save
+        fs.writeFile('./controllers/data.json', jogadores);
     } else {
         res.end("Don't Exist Customer:\n:" + JSON.stringify(updatedPlayer, null, 4));
     }
@@ -47,7 +47,5 @@ exports.delete = function(req, res) {
 };
 
 exports.save = function(req, res) {
-    let data = JSON.stringify(jogadores);
-    fs.writeFileSync('./data.json', data);
-    res.end("Saved");
+
 }
