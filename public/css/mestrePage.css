@@ -1,0 +1,12 @@
+.playerPanel {
+    padding: 5px 10px;
+    margin: 4px;
+}
+
+.playerList {
+    display: inline;
+}
+
+.adicionaveis {
+    padding: 5px 10px;
+}
