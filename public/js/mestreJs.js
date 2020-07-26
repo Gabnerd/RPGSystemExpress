@@ -1,6 +1,6 @@
 $.ajax({
     type: "GET",
-    url: "https://adventure-master.herokuapp.com/api/jogadores",
+    url: "http://localhost:3000/api/jogadores",
     success: function(response) {
         for (let i = 0; i < 2; i++) {
             let jogador = response['jogador' + (i + 1)];
@@ -116,7 +116,7 @@ function sendUpdate() {
         console.log(jogador);
         $.ajax({
             type: "PUT",
-            url: "https://adventure-master.herokuapp.com/api/jogadores/" + i,
+            url: "http://localhost:3000/api/jogadores/" + i,
             data: JSON.stringify(jogador),
             dataType: "json",
             contentType: "application/json",
@@ -158,7 +158,7 @@ function salvar() {
     };
     $.ajax({
         type: "PUT",
-        url: "http://localhost:8081/api/jogadores/" + i,
+        url: "http://localhost:3000/api/jogadores/" + i,
         data: JSON.stringify(jogador),
         dataType: "json",
         contentType: "application/json",

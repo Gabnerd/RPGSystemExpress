@@ -1,89 +1,5 @@
-var jogadores = {
-    jogador1: {
-        id: 1,
-        nome: "Galrod1",
-        vida: {
-            maximo: 10,
-            atual: 10
-        },
-        mana: {
-            maximo: 1,
-            atual: 0
-        },
-        movimento: 11,
-        primeSocor: 20,
-        sanidade: 25,
-        exposicao: 0,
-        luta: 36,
-        forca: 36,
-        destreza: 60,
-        constituicao: 32,
-        inteligencia: 28,
-        perspicacia: 28,
-        carisma: 32,
-        level: 1,
-        ataques: [{
-            nome: "Cegar em área",
-            atributos: "Alcance: 15m - Não gasta rodada - Uso único por luta"
-        }],
-        moedas: 500,
-        inventario: [{
-                nome: "Botas levianas",
-                atributo: " + 2 movimento"
-            },
-            {
-                nome: "Faca",
-                atributo: "D5"
-            },
-            {
-                nome: "Anel Brilhante",
-                atributo: ""
-            }
-        ]
-    },
-    jogador2: {
-        id: 2,
-        nome: "Galrod2",
-        vida: {
-            maximo: 10,
-            atual: 10
-        },
-        mana: {
-            maximo: 1,
-            atual: 0
-        },
-        movimento: 11,
-        primeSocor: 20,
-        sanidade: 25,
-        exposição: 0,
-        luta: 36,
-        forca: 36,
-        destreza: 60,
-        constituicao: 32,
-        inteligencia: 28,
-        perspicacia: 28,
-        carisma: 32,
-        level: 1,
-        ataques: [{
-            nome: "Cegar em área",
-            atributos: "Alcance: 15m - Não gasta rodada - Uso único por luta"
-        }],
-        moedas: 500,
-        inventario: [{
-                nome: "Botas levianas",
-                atributo: " + 4 movimento"
-            },
-            {
-                nome: "Faca",
-                atributo: "D5"
-            },
-            {
-                nome: "Anel Brilhante",
-                atributo: ""
-            }
-        ]
-    }
-}
+const fs = require('fs');
+var jogadores = require('./data.json');
 
 exports.create = function(req, res) {
     var newPlayer = req.body;
@@ -129,3 +45,9 @@ exports.delete = function(req, res) {
     console.log("--->After deletion, customer list:\n" + JSON.stringify(jogadores, null, 4));
     res.end("Deleted customer: \n" + JSON.stringify(deletePlayer, null, 4));
 };
+
+exports.save = function(req, res) {
+    let data = JSON.stringify(jogadores);
+    fs.writeFileSync('./data.json', data);
+    res.end("Saved");
+}

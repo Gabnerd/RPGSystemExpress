@@ -2,7 +2,7 @@ let nomeJogador = "Galrod2";
 let jogador;
 $.ajax({
     type: "GET",
-    url: "https://adventure-master.herokuapp.com/api/jogadores/" + nomeJogador,
+    url: "http://localhost:3000/api/jogadores/" + nomeJogador,
     success: function(response) {
         $("#nome").text(response.nome);
         $("#vidaAtual").text(response.vida.atual);

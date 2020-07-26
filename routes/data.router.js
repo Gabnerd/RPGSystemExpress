@@ -8,6 +8,9 @@ module.exports = function(app) {
     // Retrieve all Customer
     app.get('/api/jogadores', jogadores.findAll);
 
+    //Save Players in data.json
+    app.get('/api/jogadores/save', jogadores.save);
+
     // Retrieve a single Customer by Id
     app.get('/api/jogadores/:name', jogadores.findOne);
 
@@ -16,4 +19,7 @@ module.exports = function(app) {
 
     // Delete a Customer with Id
     app.delete('/api/jogadores/:id', jogadores.delete);
+
+
+
 }
