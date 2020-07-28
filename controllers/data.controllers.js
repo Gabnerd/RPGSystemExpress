@@ -3,7 +3,7 @@ var jogadores = require('./data.json');
 
 exports.create = function(req, res) {
     var newPlayer = req.body;
-    customers["jogador" + newPlayer.id] = newPlayer;
+    jogadores["jogador" + newPlayer.id] = newPlayer;
     console.log("--->After Post, customers:\n" + JSON.stringify(jogadores, null, 4));
     res.end("Post Successfully: \n" + JSON.stringify(jogadores, null, 4));
 };
@@ -33,7 +33,10 @@ exports.update = function(req, res) {
         // update data
         jogadores["jogador" + id] = updatedPlayer;
         // save
+        const fs2 = require('fs')
+        fs2.truncate('./controllers/data.json', 0, function() { fs.writeFile('./controllers/data.json', jogadores); });
         fs.writeFile('./controllers/data.json', jogadores);
+        res.end("put efetuado com sucesso!");
     } else {
         res.end("Don't Exist Customer:\n:" + JSON.stringify(updatedPlayer, null, 4));
     }

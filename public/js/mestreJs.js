@@ -1,3 +1,7 @@
+var exposicoes = [];
+var itemConters = 0;
+var ataqueConters = 0;
+var selectExposicao = 0;
 $.ajax({
     type: "GET",
     url: "http://localhost:3000/api/jogadores",
@@ -15,7 +19,7 @@ $.ajax({
                 "<p>Movimento: <input onChange=\"sendUpdate()\" id=\"movimento" + jogador.id + "\"  type=\"text\" value=\"" + jogador.movimento + "\" size=\"1\"> </p>" +
                 "<p>Primeiros Socorros: <input onChange=\"sendUpdate()\" id=\"primeSocor" + jogador.id + "\" type=\"text\" value=\"" + jogador.primeSocor + "\" size=\"1\"></p>" +
                 "<p>Sanidade: <input onChange=\"sendUpdate()\" id=\"sanidade" + jogador.id + "\" type=\"text\" value=\"" + jogador.sanidade + "\" size=\"1\"></p>" +
-                "<p>Exposição: <input onChange=\"sendUpdate()\" id=\"exposicao" + jogador.id + "\" type=\"text\" value=\"" + jogador.exposicao + "\" size=\"1\"></p>" +
+                "<p>Exposição: <select id=\"exposicao" + jogador.id + "\"></select> :  <input id=\"valorExposicao" + jogador.id + "\" size=\"1\"> <button id=\"removeExposicao" + jogador.id + "\" class=\"btn btn-outline-secondary btn-remove lineItem\">-</button> </p>" +
                 "<p>Carisma: <input onChange=\"sendUpdate()\" id=\"carisma" + jogador.id + "\" type=\"text\" value=\"" + jogador.carisma + "\" size=\"1\"></p>" +
                 "</div>" +
                 "<div class=\"col-md-6\">" +
@@ -29,40 +33,127 @@ $.ajax({
                 "</div>" +
                 "<div class=\"border rounded adicionaveis\">" +
                 "<p>Level: <input onChange=\"sendUpdate()\" id=\"level" + jogador.id + "\" type=\"text\" value=\"" + jogador.level + "\" size=\"1\"></p>" +
-                "<div id=\"ataques" + jogador.id + "\">" +
+                "<div>" +
                 "<p>Ataques: </p>" +
+                "<ul id=\"ataques" + jogador.id + "\">" +
+                "</ul>" +
+                "<p>Nome: <input id=\"newAtaque" + jogador.id + "\">, Atributo: <input id=\"newAtaqueAtributo" + jogador.id + "\"> <button id=\"ataqueAdd" + jogador.id + "\" class=\"btn btn-outline-secondary btn-add\">+</button></p>" +
                 "</div>" +
                 "<p>Moedas <input onChange=\"sendUpdate()\" id=\"moedas" + jogador.id + "\" type=\"text\" value=\"" + jogador.moedas + "\" size=\"1\"></p>" +
                 "<div>" +
                 "<p>inventario: </p>" +
                 "<ul id=\"inventario" + jogador.id + "\">" +
                 "</ul>" +
+                "<p>Nome: <input id=\"newItem" + jogador.id + "\">, Atributo: <input id=\"newItemAtributo" + jogador.id + "\"> <button id=\"itemAdd" + jogador.id + "\" class=\"btn btn-outline-secondary btn-add\">+</button></p>" +
                 "</div>" +
                 "</div>" +
                 "</div>");
             for (let i = 0; i < jogador.ataques.length; i++) {
                 let ataque = jogador.ataques[i];
-                $("#ataques" + jogador.id).append("<ul>" +
-                    "<li>" +
-                    "<div>" +
-                    "<p class=\"ataque" + jogador.id + "\"><span class=\"ataqueNome" + jogador.id + "\">" + ataque.nome + "</span>, <span class=\"ataqueAtributos" + jogador.id + "\">" + ataque.atributos + "</span>." +
-                    "</div>" +
-                    "</li>" +
-                    "</ul>");
+                $("#ataques" + jogador.id).append(
+                    "<li id=\"ataque" + ataqueConters + "\">" +
+                    "<p class=\"ataque" + jogador.id + " lineItem\">" + ataque.nome + ", " + ataque.atributos + ".</p> <button onClick=\"removeAtaque(" + jogador.id + "," + ataqueConters + ")\" class=\"btn btn-outline-secondary btn-remove lineItem\">-</button>" +
+                    "</li>");
+                ataqueConters++;
             }
             for (let i = 0; i < jogador.inventario.length; i++) {
                 let inventario = jogador.inventario[i];
                 $("#inventario" + jogador.id).append(
-                    "<li>" +
-                    "<div>" +
-                    "<p class=\"inventarioItem" + jogador.id + "\"><span class=\"inventarioNome" + jogador.id + "\">" + inventario.nome + "</span>, " + inventario.atributo + "." +
-                    "</div>" +
+                    "<li id=\"item" + itemConters + "\">" +
+                    "<p class=\"inventarioItem" + jogador.id + " lineItem\">" + inventario.nome + ", " + inventario.atributo + ".</p> <button onClick=\"removeItem(" + jogador.id + "," + ataqueConters + ")\" class=\"btn btn-outline-secondary btn-remove lineItem\">-</button>" +
                     "</li>"
                 );
+                itemConters++;
             }
+            $("#ataqueAdd" + jogador.id).click(function() {
+                $("#ataques" + jogador.id).append(
+                    "<li id=\"ataque" + ataqueConters + "\">" +
+                    "<p class=\"ataque" + jogador.id + " lineItem\">" + $("#newAtaque" + jogador.id).val() + ", " + $("#newAtaqueAtributo" + jogador.id).val() + ".</p> <button onClick=\"removeAtaque(" + jogador.id + "," + ataqueConters + ")\" class=\"btn btn-outline-secondary btn-remove lineItem\">-</button>" +
+                    "</li>");
+                sendUpdate();
+                ataqueConters++;
+            });
+            $("#itemAdd" + jogador.id).click(function() {
+                $("#inventario" + jogador.id).append(
+                    "<li id=\"item" + itemConters + "\">" +
+                    "<p class=\"inventarioItem" + jogador.id + " lineItem\">" + $("#newItem" + jogador.id).val() + ", " + $("#newItemAtributo" + jogador.id).val() + ".</p> <button onClick=\"removeItem(" + jogador.id + "," + itemConters + ")\" class=\"btn btn-outline-secondary btn-remove lineItem\">-</button>" +
+                    "</li>"
+                );
+                sendUpdate();
+                itemConters++;
+            });
+            var a = jogador.exposicao.length;
+            exposicoes.push(jogador.exposicao);
+            for (let i = 0; i < a; i++) {
+                const element = jogador.exposicao[i];
+                $("#exposicao" + jogador.id).append("<option value=\"" + i + "\">" + element.inimigo + "</option>");
+                if (i == (a - 1)) {
+                    selectExposicao = i;
+                }
+            }
+            $("#exposicao" + jogador.id).append("<option value=\"" + (++selectExposicao) + "\">adicionar inimigo</option>");
+            getExposicao(jogador.exposicao, parseInt($("#exposicao" + jogador.id).val()), jogador.id);
+            $("#exposicao" + jogador.id).change(function() {
+                var a = jogador.exposicao.length;
+                if (parseInt($("#exposicao" + jogador.id).val()) == a) {
+                    let exposicaoLocal = { inimigo: "", valor: 1 };
+                    exposicaoLocal.inimigo = prompt("Adicionar nome do inimigo");
+                    jogador.exposicao.push(exposicaoLocal);
+                    exposicoes.push(exposicaoLocal);
+                    $("#exposicao" + jogador.id).empty();
+                    for (let i = 0; i < a; i++) {
+                        const element = jogador.exposicao[i];
+                        $("#exposicao" + jogador.id).append("<option value=\"" + i + "\">" + element.inimigo + "</option>");
+                        if (i == (a - 1)) {
+                            selectExposicao = i;
+                        }
+                    }
+                    $("#exposicao" + jogador.id).append("<option value=\"" + (++selectExposicao) + "\">adicionar inimigo</option>");
+                    $("#exposicao" + jogador.id).val(0);
+                    sendUpdate();
+                } else {
+                    getExposicao(jogador.exposicao, parseInt($("#exposicao" + jogador.id).val()), jogador.id);
+                }
+            });
+            $("#valorExposicao" + jogador.id).change(function() {
+                valorExposicao = parseInt($("#valorExposicao" + jogador.id).val());
+                exposicoes[i][parseInt($("#exposicao" + jogador.id).val())].valor = valorExposicao;
+                sendUpdate();
+            });
+
+            $("#removeExposicao" + jogador.id).click(function(param) {
+                var index = parseInt($("#exposicao" + jogador.id).val());
+                jogador.exposicao.splice(index, 1);
+                var a = jogador.exposicao.length;
+                $("#exposicao" + jogador.id).empty();
+                for (let i = 0; i < a; i++) {
+                    const element = jogador.exposicao[i];
+                    $("#exposicao" + jogador.id).append("<option value=\"" + i + "\">" + element.inimigo + "</option>");
+                    if (i == (a - 1)) {
+                        selectExposicao = i;
+                    }
+                }
+                $("#exposicao" + jogador.id).append("<option value=\"" + (++selectExposicao) + "\">adicionar inimigo</option>");
+                $("#exposicao" + jogador.id).val(0);
+                getExposicao(jogador.exposicao, parseInt($("#exposicao" + jogador.id).val()), jogador.id);
+                sendUpdate();
+            });
         }
     }
 });
+
+function removeItem(idJogador, itemNum) {
+    $("#inventario" + idJogador + " #item" + itemNum).remove();
+    itemConters--;
+    sendUpdate();
+}
+
+function removeAtaque(idJogador, ataqueNum) {
+    $("#ataques" + idJogador + " #ataque" + ataqueNum).remove();
+    ataqueConters--;
+    sendUpdate();
+}
+
 
 function sendUpdate() {
     var ataques = [];
@@ -100,7 +191,7 @@ function sendUpdate() {
             movimento: parseInt($("#movimento" + i).val()),
             primeSocor: parseInt($("#primeSocor" + i).val()),
             sanidade: parseInt($("#sanidade" + i).val()),
-            exposicao: parseInt($("#exposicao" + i).val()),
+            exposicao: exposicoes[i - 1],
             luta: parseInt($("#luta" + i).val()),
             forca: parseInt($("#forca" + i).val()),
             destreza: parseInt($("#destreza" + i).val()),
@@ -113,7 +204,6 @@ function sendUpdate() {
             moedas: parseInt($("#moedas" + i).val()),
             inventario: inventario
         };
-        console.log(jogador);
         $.ajax({
             type: "PUT",
             url: "http://localhost:3000/api/jogadores/" + i,
@@ -123,8 +213,7 @@ function sendUpdate() {
             success: function(response) {
 
             }
-        });
-        socket.emit('update', jogador);
+        })
     }
 }
 
@@ -156,6 +245,7 @@ function salvar() {
         moedas: parseInt($("#moedas" + i).val()),
         inventario: inventario
     };
+    console.log(jogador);
     $.ajax({
         type: "PUT",
         url: "http://localhost:3000/api/jogadores/" + i,
@@ -166,4 +256,9 @@ function salvar() {
 
         }
     });
+    socket.emit('update', jogador);
+};
+
+function getExposicao(exposicao, index, idJogador) {
+    $("#valorExposicao" + idJogador).val(exposicao[index].valor);
 }

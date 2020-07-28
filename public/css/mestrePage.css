@@ -10,3 +10,17 @@
 .adicionaveis {
     padding: 5px 10px;
 }
+
+.btn-add {
+    margin-bottom: 6px;
+    padding: 5px 10px;
+}
+
+li .lineItem {
+    display: inline;
+}
+
+.btn-remove {
+    margin-bottom: 6px;
+    padding: 0px 8px;
+}
