@@ -39,7 +39,7 @@ function rolardadinho(){
                 const element = response.dice[index];
                 
     var resultado= element.value;
-          $("#resultadodado").append(resultado+" ") ;
+          $("#resultadodado").append(resultado+" - ") ;
             }
    
         }
