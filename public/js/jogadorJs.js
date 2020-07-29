@@ -26,3 +26,18 @@ function getData(data) {
 
 
 }
+
+function rolardadinho(){
+
+    $.ajax({
+        type: "GET",
+        url: "http://roll.diceapi.com/json/d"+$("#numlados").val(),
+        success: function (response) {
+            var resultado = response.dice[0].value;
+          $("#resultadodado").text(resultado) ;
+   
+   
+        }
+    });
+
+   }

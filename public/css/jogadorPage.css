@@ -111,3 +111,31 @@ color:teal;
 
     color:chocolate;
 }
+
+.dado{
+
+    text-align: center;
+  
+}
+
+.dadinho{
+
+    margin-top:10px;
+}
+
+
+
+.tabela{
+
+    font-size:4vw;
+}
+
+#resultadodado{
+
+background-color: brown;
+color:white;
+text-shadow:1px 1px black;
+font-family: 'MedievalSharp', cursive;
+border:4px solid white;
+
+}

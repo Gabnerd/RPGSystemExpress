@@ -23,11 +23,35 @@
 
 <body>
     <div class="ficha bordinha  cor-fundo letra-medieval">
-        <h1 class="center">Nome: <span id="nome"></span></h1><br><br>
+      
+        <div class="row dado">
+
+            <div class="col-md-4">
+
+            
+                 <h2> Numero de Lados:<input type="text" id="numlados" size="3"><br></h2> 
+                  
+                
+            </div>
+
+            
+            <div class="col-md-4">
+                <button id="rolardado" class="dadinho" onclick="rolardadinho()">Rolar</button><br>
+            </div>
+
+
+            <div class="col-md-4">
+                <h2 id="resultadodado"></h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="ficha bordinha  cor-fundo letra-medieval">
+        <h1 class="center">Nome: <span id="nome"></span></h1><br>
         <div class="row">
 
             <div class="col-md-4">
-                <h2 class="center vermelho">Vida: <span id="vidaAtual"></span>/<span id="vidaMaximo"></span></h2><br>
+                <h2 class="center vermelho">Vida: <span id="vidaAtual"></span>/<span id="vidaMaximo"></span></h2>
 
             </div>
             <div class="col-md-4">
@@ -86,29 +110,29 @@
     </div>
 
 
-    <div class="ficha bordinha-dois cor-fundo">
+    <div class="ficha bordinha-dois cor-fundo ">
         <h1 class="center letra-medieval">Inventário: <span id="nome"></span></h1><br><br>
 
 
-        <table class="table table-dark">
+        <table class="table table-dark tabela">
             <thead>
                 <tr>
 
                     <th scope="col">
-                        <h2 class="center letra-medieval">Item:</h2>
+                        <h2 class="center letra-medieval tabela">Item:</h2>
                     </th>
                     <th scope="col">
-                        <h2 class="center letra-medieval">Vatagem/Dano</h2>
+                        <h2 class="center letra-medieval tabela">Vatagem/Dano</h2>
                     </th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td>
-                        <h3 class="center">Espada de Metal</h3>
+                        <h3 class="center tabela">Espada de Metal</h3>
                     </td>
                     <td>
-                        <h3 class="center">D5<h3>
+                        <h3 class="center tabela">D5<h3>
                     </td>
                 </tr>
 
