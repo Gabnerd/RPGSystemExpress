@@ -29,13 +29,18 @@ function getData(data) {
 
 function rolardadinho(){
 
+    $("#resultadodado").text("");
     $.ajax({
         type: "GET",
-        url: "http://roll.diceapi.com/json/d"+$("#numlados").val(),
+        url: "http://roll.diceapi.com/json/"+$("#numlados").val(),
         success: function (response) {
-            var resultado = response.dice[0].value;
-          $("#resultadodado").text(resultado) ;
-   
+
+            for (let index = 0; index < response.dice.length; index++) {
+                const element = response.dice[index];
+                
+    var resultado= element.value;
+          $("#resultadodado").append(resultado+" ") ;
+            }
    
         }
     });
