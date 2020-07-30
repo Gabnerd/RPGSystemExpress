@@ -4,7 +4,7 @@ var ataqueConters = 0;
 var selectExposicao = 0;
 $.ajax({
     type: "GET",
-    url: "http://localhost:3000/api/jogadores",
+    url: "https://adventure-master.herokuapp.com/api/jogadores",
     success: function(response) {
         for (let i = 0; i < 2; i++) {
             let jogador = response['jogador' + (i + 1)];
@@ -206,7 +206,7 @@ function sendUpdate() {
         };
         $.ajax({
             type: "PUT",
-            url: "http://localhost:3000/api/jogadores/" + i,
+            url: "https://adventure-master.herokuapp.com/api/jogadores/" + i,
             data: JSON.stringify(jogador),
             dataType: "json",
             contentType: "application/json",
@@ -248,7 +248,7 @@ function salvar() {
     console.log(jogador);
     $.ajax({
         type: "PUT",
-        url: "http://localhost:3000/api/jogadores/" + i,
+        url: "https://adventure-master.herokuapp.com/api/jogadores/" + i,
         data: JSON.stringify(jogador),
         dataType: "json",
         contentType: "application/json",
