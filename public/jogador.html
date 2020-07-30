@@ -17,88 +17,64 @@
     <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
     <script src="js/jogadorJs.js"></script>
 </head>
-
-
 <!--Divisões-->
-
 <body>
     <div class="ficha bordinha  cor-fundo letra-medieval">
-      
         <div class="row dado">
-
             <div class="col-md-4">
-
-            
                  <h2> Numero de Lados:<input type="text" id="numlados" size="3"><br></h2> 
-                  
-                
             </div>
-
-            
             <div class="col-md-4">
                 <button id="rolardado" class="dadinho" onclick="rolardadinho()">Rolar</button><br>
             </div>
-
-
             <div class="col-md-4">
                 <h2 id="resultadodado"></h2>
             </div>
         </div>
     </div>
-
     <div class="ficha bordinha  cor-fundo letra-medieval">
         <h1 class="center">Nome: <span id="nome"></span></h1><br>
         <div class="row">
-
             <div class="col-md-4">
                 <h2 class="center vermelho">Vida: <span id="vidaAtual"></span>/<span id="vidaMaximo"></span></h2>
-
             </div>
             <div class="col-md-4">
                 <h2 class="center azul">Mana: <span id="manaAtual"></span>/<span id="manaMaximo"></span></h2>
             </div>
             <div class="col-md-4">
-
-                <h2 class="center azul-escuro">Sanidade: <span id="manaAtual"></span>/<span id="manaMaximo"></span></h2>
+                <h2 class="center azul-escuro">Sanidade: <span id="Sanidade"></span></h2>
             </div>
         </div>
     </div>
-
-
     <div class="ficha bordinha cor-fundo letra-medieval ">
         <h1 class="center">Atributos: <span id="nome"></span></h1><br><br>
         <div class="row ">
             <div class="col-md-2">
             </div>
             <div class="col-md-3 ">
-                <h2 class=" center d-flex justify-content-end cor-luta">Luta: <span id="vidaAtual"></span>/<span id="vidaMaximo"></span></h2><br>
-                <h2 class=" center d-flex justify-content-end cor-movimento">Movimento: <span id="vidaAtual"></span>/<span id="vidaMaximo"></span></h2><br>
-                <h2 class=" center d-flex justify-content-end verde">Primeiros S.: <span id="vidaAtual"></span>/<span id="vidaMaximo"></span></h2><br>
-                <h2 class=" center d-flex justify-content-end cor-inteligencia">Inteligência: <span id="vidaAtual"></span>/<span id="vidaMaximo"></span></h2><br>
-                <h2 class=" center d-flex justify-content-end cor-sorte">Sorte: <span id="vidaAtual"></span>/<span id="vidaMaximo"></span></h2><br>
+                <h2 class=" center d-flex justify-content-end cor-luta">Luta: <span id="luta"></span></h2><br>
+                <h2 class=" center d-flex justify-content-end cor-movimento">Movimento: <span id="movimento"></span></h2><br>
+                <h2 class=" center d-flex justify-content-end verde">Primeiros S.: <span id="primeScorr"></span></h2><br>
+                <h2 class=" center d-flex justify-content-end cor-inteligencia">Inteligência: <span id="inteligencia"></span></h2><br>
+                <h2 class=" center d-flex justify-content-end cor-sorte">Sorte: <span id="sorte"></span></h2><br>
             </div>
             <div class="col-md-3">
-                <h2 class="center d-flex justify-content-end cor-forca">Força: <span id="manaAtual"></span>/<span id="manaMaximo"></span></h2><br>
-                <h2 class="center d-flex justify-content-end cor-destreza">Destreza: <span id="vidaAtual"></span>/<span id="vidaMaximo"></span></h2><br>
-                <h2 class="center d-flex justify-content-end cor-constituicao">Constituição: <span id="vidaAtual"></span>/<span id="vidaMaximo"></span></h2><br>
-                <h2 class="center d-flex justify-content-end cor-perspicaz">Perspicácia: <span id="vidaAtual"></span>/<span id="vidaMaximo"></span></h2><br>
+                <h2 class="center d-flex justify-content-end cor-forca">Força: <span id="forca"></span></h2><br>
+                <h2 class="center d-flex justify-content-end cor-destreza">Destreza: <span id="destreza"></span></h2><br>
+                <h2 class="center d-flex justify-content-end cor-constituicao">Constituição: <span id="constituicao"></span></h2><br>
+                <h2 class="center d-flex justify-content-end cor-perspicaz">Perspicácia: <span id="perspicacia"></span></h2><br>
             </div>
             <div class="col-md-4">
             </div>
         </div>
     </div>
-
-
-
-
     <div class="ficha bordinha cor-fundo letra-medieval">
-        <h1 class="center">Exposição: <span id="nome"></span></h1><br><br>
+        <h1 class="center">Exposição: </h1><br><br>
         <div class="row">
             <div class="col-md-3 ">
             </div>
             <div class="col-md-3">
-                <h2 class="center">Geral: <span id="vidaAtual"></span>/<span id="vidaMaximo"></span></h2><br>
-
+                <h2 class="center">Geral: <span id="expocicaoGeral"></span></h2><br>
             </div>
             <div class="col-md-3">
                 <h2 class=" verde left">Goblin: <span id="manaAtual"></span>/<span id="manaMaximo"></span></h2>
@@ -108,16 +84,11 @@
             </div>
         </div>
     </div>
-
-
     <div class="ficha bordinha-dois cor-fundo ">
         <h1 class="center letra-medieval">Habilidades: <span id="nome"></span></h1><br><br>
-
-
         <table class="table table-dark tabela">
             <thead>
                 <tr>
-
                     <th scope="col">
                         <h2 class="center letra-medieval tabela">Ataque:</h2>
                     </th>
@@ -141,27 +112,14 @@
                         <h3 class="center tabela">Furtividade<h3>
                     </td>
                 </tr>
-
             </tbody>
         </table>
-
-
-
-
-
-
     </div>
-
-
-
     <div class="ficha bordinha-dois cor-fundo ">
         <h1 class="center letra-medieval">Inventário: <span id="nome"></span></h1><br><br>
-
-
         <table class="table table-dark tabela">
             <thead>
                 <tr>
-
                     <th scope="col">
                         <h2 class="center letra-medieval tabela">Item:</h2>
                     </th>
@@ -179,23 +137,9 @@
                         <h3 class="center tabela">D5<h3>
                     </td>
                 </tr>
-
             </tbody>
         </table>
-
-
-
-
-
-
     </div>
-
-
-
-    
-
-
-   
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
