@@ -43,6 +43,7 @@
         "perspicacia": 28,
         "carisma": 32,
         "level": 1,
+        "sorte":50,
         "ataques": [
             {
                 "nome": "Cegar em área",
@@ -103,6 +104,7 @@
         "perspicacia": 28,
         "carisma": 32,
         "level": 1,
+        "sorte":50,
         "ataques": [
             {
                 "nome": "Cegar em área",
