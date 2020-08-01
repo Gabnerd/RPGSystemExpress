@@ -15,7 +15,7 @@ exports.findAll = function(req, res) {
 
 exports.findOne = function(req, res) {
     var jogador
-    for (let i = 0; i < 2; i++) {
+    for (let i = 0; i < 4; i++) {
         const element = jogadores["jogador" + (i + 1)];
         var name = req.params.name.toString();
         if (name == element.nome) {
