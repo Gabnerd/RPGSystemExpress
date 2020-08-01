@@ -32,7 +32,7 @@ function rolardadinho(){
     $("#resultadodado").text("");
     $.ajax({
         type: "GET",
-        url: "http://roll.diceapi.com/json/"+$("#numlados").val(),
+        url: "http://adventure-master.herokuapp.com/api/dice/"+$("#numlados").val(),
         success: function (response) {
 
             for (let index = 0; index < response.dice.length; index++) {
