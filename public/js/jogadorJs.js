@@ -2,7 +2,7 @@ let nomeJogador = prompt("digite o nome do personagem:");
 let jogador;
 $.ajax({
     type: "GET",
-    url: "http://adventure-master.herokuapp.com/api/jogadores/" + nomeJogador,
+    url: "https://adventure-master.herokuapp.com/api/jogadores/" + nomeJogador,
     success: function(response) {
         $("#nome").text(response.nome);
         $("#vidaAtual").text(response.vida.atual);
@@ -62,7 +62,7 @@ function getData() {
     
     $.ajax({
         type: "GET",
-        url: "http://adventure-master.herokuapp.com/api/jogadores/"+nomeJogador,
+        url: "https://adventure-master.herokuapp.com/api/jogadores/"+nomeJogador,
         success: function (response) {
             $("#nome").text(response.nome);
             $("#vidaAtual").text(response.vida.atual);
@@ -123,7 +123,7 @@ function rolardadinho(){
     $("#resultadodado").text("");
     $.ajax({
         type: "GET",
-        url: "http://adventure-master.herokuapp.com/api/dice/"+$("#numlados").val(),
+        url: "https://adventure-master.herokuapp.com/api/dice/"+$("#numlados").val(),
         success: function (response) {
 
             for (let index = 0; index < response.dice.length; index++) {
