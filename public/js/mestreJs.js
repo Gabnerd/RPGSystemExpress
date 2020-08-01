@@ -6,7 +6,7 @@ $.ajax({
     type: "GET",
     url: "https://adventure-master.herokuapp.com/api/jogadores",
     success: function(response) {
-        for (let i = 0; i < 2; i++) {
+        for (let i = 0; i < 4; i++) {
             let jogador = response['jogador' + (i + 1)];
             $(".nav-tabs").append("<li class=\"nav-item\" role=\"presentation\">" +
                 "<a class=\"nav-link\" id=\"home-tab\"data-toggle=\"tab\" href = \"#jogador" + jogador.id + "\" role=\"tab\" aria-controls=\"home\" aria-selected=\"true\"> " + jogador.nome + " </a>" +
@@ -158,7 +158,7 @@ function removeAtaque(idJogador, ataqueNum) {
 function sendUpdate() {
     var ataques = [];
     var inventario = [];
-    for (let i = 1; i <= 2; i++) {
+    for (let i = 1; i <= 4; i++) {
         var array1 = $(".ataque" + i).text().split(".");
         for (let j = 0; j < (array1.length - 1); j++) {
             const element = array1[j];

@@ -1,2 +1,2 @@
 var socket;
-socket = io.connect('http://localhost:3000');
+socket = io.connect('http://adventure-master.herokuapp.com');
