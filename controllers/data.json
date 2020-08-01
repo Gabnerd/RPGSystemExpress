@@ -1,10 +1,10 @@
 {
     "jogador1": {
         "id": 1,
-        "nome": "Galrod1",
+        "nome": "Galrod",
         "vida": {
             "maximo": 10,
-            "atual": 4
+            "atual": 9
         },
         "mana": {
             "maximo": 1,
@@ -16,47 +16,26 @@
         "exposicao": [
             {
                 "inimigo": "Goblin",
-                "valor": 2
-            },
-            {
-                "inimigo": "teste",
-                "valor": 1
-            },
-            {
-                "inimigo": "a",
-                "valor": 2
-            },
-            {
-                "inimigo": "c",
-                "valor": 1
-            },
-            {
-                "inimigo": "d",
-                "valor": 5
+                "valor": 0
             }
         ],
-        "luta": 36,
+        "luta": 40,
         "forca": 36,
         "destreza": 60,
         "constituicao": 32,
-        "inteligencia": 28,
-        "perspicacia": 28,
+        "inteligencia": 36,
+        "perspicacia": 52,
         "carisma": 32,
-        "level": 1,
+        "level": 2,
         "sorte":50,
         "ataques": [
             {
                 "nome": "Cegar em área",
                 "atributos": "Alcance: 15m - Não gasta rodada - Uso único por luta",
                 "Custo": ""
-            },
-            {
-                "nome": "BackSteb",
-                "atributos": " + 1 D3 de dano na arma",
-                "Custo":"Furtividade"
             }
         ],
-        "moedas": 500,
+        "moedas": 1300,
         "inventario": [
             {
                 "nome": "Botas levianas",
@@ -67,6 +46,14 @@
                 "atributo": "D5"
             },
             {
+                "nome": "Arco e Flecha",
+                "atributo": "D3"
+            },
+            {
+                "nome": "Rubis Brilhantes vermelhos",
+                "atributo": "20 Rubis"
+            },
+            {
                 "nome": "Anel Brilhante",
                 "atributo": ""
             }
@@ -74,111 +61,129 @@
     },
     "jogador2": {
         "id": 2,
-        "nome": "Galrod2",
+        "nome": "Listley",
         "vida": {
-            "maximo": 10,
-            "atual": 10
+            "maximo": 11,
+            "atual": 11
         },
         "mana": {
-            "maximo": 1,
-            "atual": 0
+            "maximo": 12,
+            "atual": 12
         },
-        "movimento": 11,
-        "primeSocor": 20,
-        "sanidade": 25,
+        "movimento": 6,
+        "primeSocor": 3,
+        "sanidade": 45,
         "exposicao": [
             {
                 "inimigo": "Goblin",
-                "valor": 1
-            },
-            {
-                "inimigo": "Goblin",
-                "valor": 3
+                "valor": 0
             }
         ],
-        "luta": 36,
-        "forca": 36,
-        "destreza": 60,
-        "constituicao": 32,
+        "luta": 50,
+        "forca": 44,
+        "destreza": 50,
+        "constituicao": 34,
         "inteligencia": 28,
-        "perspicacia": 28,
-        "carisma": 32,
-        "level": 1,
+        "perspicacia": 20,
+        "carisma": 30,
+        "level": 2,
         "sorte":50,
         "ataques": [
             {
-                "nome": "Cegar em área",
-                "atributos": "Alcance: 15m - Não gasta rodada - Uso único por luta",
-                "Custo": ""
+                "nome": "Magia de Ilusão",
+                "atributos": "Tira rodadas do inimigo dependendo do resultado",
+                "Custo": "4 mana"
             },
             {
-                "nome": "BackSteb",
-                "atributos": " + 1 D3 de dano na arma",
-                "Custo":"Furtividade"
+                "nome": "Lanterna",
+                "atributos": "Ilumina ate 5M",
+                "Custo": "1 mana"
+            },
+            {
+                "nome": "Pele de mana",
+                "atributos": "2 de armadura",
+                "Custo": "4 mana"
+            },
+            {
+                "nome": "Pocao de cura Transforma agua em pocao",
+                "atributos": "D3 De cura",
+                "Custo": "4 mana"
             }
+
         ],
-        "moedas": 500,
+        "moedas": 650,
         "inventario": [
             {
-                "nome": "Botas levianas",
-                "atributo": " + 4 movimento"
+                "nome": "Medalhão Azul ",
+                "atributo": " + 1 Mana"
             },
             {
-                "nome": "Faca",
-                "atributo": "D5"
+                "nome": "Arco e Flecha",
+                "atributo": "D3"
             },
             {
-                "nome": "Anel Brilhante",
-                "atributo": ""
+                "nome": "3 Potes de Agua",
+                "atributo": "1 Pote Cheio, 2 Vazio"
             }
         ]
     },
     "jogador3": {
-        "id": 2,
-        "nome": "Galrod2",
+        "id": 3,
+        "nome": "Moon",
         "vida": {
-            "maximo": 10,
-            "atual": 10
+            "maximo": 12,
+            "atual": 12
         },
         "mana": {
-            "maximo": 1,
-            "atual": 0
+            "maximo": 15,
+            "atual": 11
         },
-        "movimento": 11,
-        "primeSocor": 20,
-        "sanidade": 25,
+        "movimento": 6,
+        "primeSocor": 8,
+        "sanidade": 35,
         "exposicao": [
             {
                 "inimigo": "Goblin",
                 "valor": 1
             },
             {
-                "inimigo": "Goblin",
-                "valor": 3
+                "inimigo": "Demonio",
+                "valor": 1
             }
         ],
-        "luta": 36,
-        "forca": 36,
-        "destreza": 60,
-        "constituicao": 32,
-        "inteligencia": 28,
-        "perspicacia": 28,
-        "carisma": 32,
-        "level": 1,
+        "luta": 52,
+        "forca": 44,
+        "destreza": 44,
+        "constituicao": 36,
+        "inteligencia": 24,
+        "perspicacia": 51,
+        "carisma": 17,
+        "level": 3,
         "sorte":50,
         "ataques": [
             {
-                "nome": "Cegar em área",
-                "atributos": "Alcance: 15m - Não gasta rodada - Uso único por luta",
-                "Custo": ""
+                "nome": "Ataque do Pet",
+                "atributos": "D3 Gelo 20 Metros - Nao gasta rodada",
+                "Custo": "2 Mana"
             },
             {
-                "nome": "BackSteb",
-                "atributos": " + 1 D3 de dano na arma",
-                "Custo":"Furtividade"
+                "nome": "Pele de mana",
+                "atributos": "2 de armadura",
+                "Custo": "4 mana"
+            },
+            {
+                "nome": "Bloquear",
+                "atributos": "3 de armadura",
+                "Custo": "Ser Atacado"
+            },
+            
+            {
+                "nome": "Cura",
+                "atributos": " D4 de cura ",
+                "Custo":"5 Mana"
             }
         ],
-        "moedas": 500,
+        "moedas": 100,
         "inventario": [
             {
                 "nome": "Botas levianas",
@@ -195,63 +200,73 @@
         ]
     },
     "jogador4": {
-        "id": 2,
-        "nome": "Galrod2",
+        "id": 4,
+        "nome": "Cleiton",
         "vida": {
-            "maximo": 10,
-            "atual": 10
+            "maximo": 11,
+            "atual": 11
         },
         "mana": {
-            "maximo": 1,
-            "atual": 0
+            "maximo": 13,
+            "atual": 13
         },
-        "movimento": 11,
-        "primeSocor": 20,
-        "sanidade": 25,
+        "movimento": 5,
+        "primeSocor": 12,
+        "sanidade": 45,
         "exposicao": [
             {
                 "inimigo": "Goblin",
                 "valor": 1
             },
             {
-                "inimigo": "Goblin",
-                "valor": 3
+                "inimigo": "Demonio",
+                "valor": 2
             }
         ],
-        "luta": 36,
-        "forca": 36,
-        "destreza": 60,
-        "constituicao": 32,
-        "inteligencia": 28,
-        "perspicacia": 28,
-        "carisma": 32,
-        "level": 1,
+        "luta": 46,
+        "forca": 32,
+        "destreza": 50,
+        "constituicao": 16,
+        "inteligencia": 22,
+        "perspicacia": 12,
+        "carisma": 12,
+        "level": 3,
         "sorte":50,
         "ataques": [
             {
-                "nome": "Cegar em área",
-                "atributos": "Alcance: 15m - Não gasta rodada - Uso único por luta",
-                "Custo": ""
+                "nome": "Soco Flamejante",
+                "atributos": "D4 + 2",
+                "Custo": "8 mana"
             },
             {
-                "nome": "BackSteb",
-                "atributos": " + 1 D3 de dano na arma",
-                "Custo":"Furtividade"
+                "nome": "Lanca Chamas - 2m",
+                "atributos": "D3 + 2",
+                "Custo": "3 Mana"
+            },
+            {
+                "nome": "Pele de mana",
+                "atributos": "2 de armadura",
+                "Custo": "4 mana"
             }
+         
         ],
-        "moedas": 500,
+        "moedas": 0,
         "inventario": [
             {
-                "nome": "Botas levianas",
-                "atributo": " + 4 movimento"
+                "nome": "Anel vermelho",
+                "atributo": " + 1 vida"
             },
             {
-                "nome": "Faca",
+                "nome": "Machado de combate",
                 "atributo": "D5"
             },
             {
-                "nome": "Anel Brilhante",
-                "atributo": ""
+                "nome": "Cristal de mana - Uso unico",
+                "atributo": "D4 de recuperacao de mana"
+            },
+            {
+                "nome": "Bracelete de ferro",
+                "atributo": "+3 se atacado no braco"
             }
         ]
     }
