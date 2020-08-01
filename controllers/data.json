@@ -1,1 +1,134 @@
-{"jogador1":{"id":1,"nome":"Galrod1","vida":{"maximo":10,"atual":4},"mana":{"maximo":1,"atual":0},"movimento":11,"primeSocor":20,"sanidade":25,"exposicao":[{"inimigo":"Goblin","valor":2},{"inimigo":"teste","valor":1},{"inimigo":"a","valor":2},{"inimigo":"c","valor":1},{"inimigo":"d","valor":5}],"luta":36,"forca":36,"destreza":60,"constituicao":32,"inteligencia":28,"perspicacia":28,"carisma":32,"level":1,"ataques":[{"nome":"Cegar em área","atributos":"Alcance: 15m - Não gasta rodada - Uso único por luta"},{"nome":"BackSteb","atributos":" + 1 D3 de dano na arma"}],"moedas":500,"inventario":[{"nome":"Botas levianas","atributo":" + 2 movimento"},{"nome":"Faca","atributo":"D5"},{"nome":"Anel Brilhante","atributo":""}]},"jogador2":{"id":2,"nome":"Galrod2","vida":{"maximo":10,"atual":10},"mana":{"maximo":1,"atual":0},"movimento":11,"primeSocor":20,"sanidade":25,"exposicao":[{"inimigo":"Goblin","valor":1},{"inimigo":"Goblin","valor":3}],"luta":36,"forca":36,"destreza":60,"constituicao":32,"inteligencia":28,"perspicacia":28,"carisma":32,"level":1,"ataques":[{"nome":"Cegar em área","atributos":"Alcance: 15m - Não gasta rodada - Uso único por luta"},{"nome":"backstab","atributos":"D3"}],"moedas":500,"inventario":[{"nome":"Botas levianas","atributo":" + 4 movimento"},{"nome":"Faca","atributo":"D5"},{"nome":"Anel Brilhante","atributo":""}]}}
+{
+    "jogador1": {
+        "id": 1,
+        "nome": "Galrod1",
+        "vida": {
+            "maximo": 10,
+            "atual": 4
+        },
+        "mana": {
+            "maximo": 1,
+            "atual": 0
+        },
+        "movimento": 11,
+        "primeSocor": 20,
+        "sanidade": 25,
+        "exposicao": [
+            {
+                "inimigo": "Goblin",
+                "valor": 2
+            },
+            {
+                "inimigo": "teste",
+                "valor": 1
+            },
+            {
+                "inimigo": "a",
+                "valor": 2
+            },
+            {
+                "inimigo": "c",
+                "valor": 1
+            },
+            {
+                "inimigo": "d",
+                "valor": 5
+            }
+        ],
+        "luta": 36,
+        "forca": 36,
+        "destreza": 60,
+        "constituicao": 32,
+        "inteligencia": 28,
+        "perspicacia": 28,
+        "carisma": 32,
+        "level": 1,
+        "ataques": [
+            {
+                "nome": "Cegar em área",
+                "atributos": "Alcance: 15m - Não gasta rodada - Uso único por luta",
+                "Custo": ""
+            },
+            {
+                "nome": "BackSteb",
+                "atributos": " + 1 D3 de dano na arma",
+                "Custo":"Furtividade"
+            }
+        ],
+        "moedas": 500,
+        "inventario": [
+            {
+                "nome": "Botas levianas",
+                "atributo": " + 2 movimento"
+            },
+            {
+                "nome": "Faca",
+                "atributo": "D5"
+            },
+            {
+                "nome": "Anel Brilhante",
+                "atributo": ""
+            }
+        ]
+    },
+    "jogador2": {
+        "id": 2,
+        "nome": "Galrod2",
+        "vida": {
+            "maximo": 10,
+            "atual": 10
+        },
+        "mana": {
+            "maximo": 1,
+            "atual": 0
+        },
+        "movimento": 11,
+        "primeSocor": 20,
+        "sanidade": 25,
+        "exposicao": [
+            {
+                "inimigo": "Goblin",
+                "valor": 1
+            },
+            {
+                "inimigo": "Goblin",
+                "valor": 3
+            }
+        ],
+        "luta": 36,
+        "forca": 36,
+        "destreza": 60,
+        "constituicao": 32,
+        "inteligencia": 28,
+        "perspicacia": 28,
+        "carisma": 32,
+        "level": 1,
+        "ataques": [
+            {
+                "nome": "Cegar em área",
+                "atributos": "Alcance: 15m - Não gasta rodada - Uso único por luta",
+                "Custo": ""
+            },
+            {
+                "nome": "BackSteb",
+                "atributos": " + 1 D3 de dano na arma",
+                "Custo":"Furtividade"
+            }
+        ],
+        "moedas": 500,
+        "inventario": [
+            {
+                "nome": "Botas levianas",
+                "atributo": " + 4 movimento"
+            },
+            {
+                "nome": "Faca",
+                "atributo": "D5"
+            },
+            {
+                "nome": "Anel Brilhante",
+                "atributo": ""
+            }
+        ]
+    }
+}
