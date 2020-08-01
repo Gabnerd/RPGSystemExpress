@@ -1,4 +1,4 @@
-let nomeJogador = "Galrod2";
+let nomeJogador = prompt("digite o nome do personagem:");
 let jogador;
 $.ajax({
     type: "GET",
@@ -17,13 +17,41 @@ $.ajax({
         $("#sorte").text(response.sorte);
         $("#forca").text(response.forca);
         $("#destreza").text(response.destreza);
-        $("#contituicao").text(response.contituicao);
+        $("#constituicao").text(response.constituicao);
         $("#perspicacia").text(response.perspicacia);
+        $("#moedas").text(response.moedas);
         for (let i = 0; i < response.exposicao.length; i++) {
             const element = response.exposicao[i];
             $("#listExposicao").append(
             "<h2 class=\"left\">"+element.inimigo+": "+element.valor+"</h2>"
             );
+        }
+
+        for (let i = 0; i < response.ataques.length; i++) {
+            const element = response.ataques[i];
+            if(element.Custo == ""){
+                element.Custo = "Sem custo";
+            }
+            $("#ataques").append("<div class=\"card ataque-card border-dark\">"+
+            "<div class=\"card-body\">"+
+              "<h4 class=\"card-title\">"+ element.nome+"</h4>"+
+              "<p class=\"card-text\">Vantagem/Dano: "+element.atributos+ "</p>"+
+              "<p class=\"card-text\">Custo: "+element.Custo+"</p>"+
+            "</div>"+
+          "</div><br>");
+        }
+
+        for (let i = 0; i < response.inventario.length; i++) {
+            const element = response.inventario[i];
+            if(element.atributo == ""){
+                element.atributo = "Sem atributo";
+            }
+            $("#inventario").append("<div class=\"card ataque-card border-dark\">"+
+            "<div class=\"card-body\">"+
+              "<h4 class=\"card-title\">"+ element.nome+"</h4>"+
+              "<p class=\"card-text\"> Vantagem/Dano: "+element.atributo+"</p>"+
+            "</div>"+
+          "</div><br>");
         }
     }
 });
@@ -36,13 +64,55 @@ function getData() {
         type: "GET",
         url: "http://adventure-master.herokuapp.com/api/jogadores/"+nomeJogador,
         success: function (response) {
-            jogador = response;
-        $("#nome").text(jogador.nome);
-        $("#vidaAtual").text(jogador.vida.atual);
-        $("#vidaMaximo").text(jogador.vida.maximo);
-        $("#manaAtual").text(jogador.mana.atual);
-        $("#manaMaximo").text(jogador.mana.maximo);
-
+            $("#nome").text(response.nome);
+            $("#vidaAtual").text(response.vida.atual);
+            $("#vidaMaximo").text(response.vida.maximo);
+            $("#manaAtual").text(response.mana.atual);
+            $("#manaMaximo").text(response.mana.maximo);
+            $("#sanidade").text(response.sanidade);
+            $("#luta").text(response.luta);
+            $("#movimento").text(response.movimento);
+            $("#primeScorr").text(response.primeSocor);
+            $("#inteligencia").text(response.inteligencia);
+            $("#sorte").text(response.sorte);
+            $("#forca").text(response.forca);
+            $("#destreza").text(response.destreza);
+            $("#constituicao").text(response.constituicao);
+            $("#perspicacia").text(response.perspicacia);
+            $("#moedas").text(response.moedas);
+            for (let i = 0; i < response.exposicao.length; i++) {
+                const element = response.exposicao[i];
+                $("#listExposicao").append(
+                "<h2 class=\"left\">"+element.inimigo+": "+element.valor+"</h2>"
+                );
+            }
+    
+            for (let i = 0; i < response.ataques.length; i++) {
+                const element = response.ataques[i];
+                if(element.Custo == ""){
+                    element.Custo = "Sem custo";
+                }
+                $("#ataques").append("<div class=\"card ataque-card border-dark\">"+
+                "<div class=\"card-body\">"+
+                  "<h4 class=\"card-title\">"+ element.nome+"</h4>"+
+                  "<p class=\"card-text\">Vantagem/Dano: "+element.atributos+ "</p>"+
+                  "<p class=\"card-text\">Custo: "+element.Custo+"</p>"+
+                "</div>"+
+              "</div><br>");
+            }
+    
+            for (let i = 0; i < response.inventario.length; i++) {
+                const element = response.inventario[i];
+                if(element.atributo == ""){
+                    element.atributo = "Sem atributo";
+                }
+                $("#inventario").append("<div class=\"card ataque-card border-dark\">"+
+                "<div class=\"card-body\">"+
+                  "<h4 class=\"card-title\">"+ element.nome+"</h4>"+
+                  "<p class=\"card-text\"> Vantagem/Dano: "+element.atributo+"</p>"+
+                "</div>"+
+              "</div><br>");
+            }
         }
     });
 

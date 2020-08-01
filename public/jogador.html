@@ -59,10 +59,10 @@
                 <h2 class=" center d-flex justify-content-end cor-sorte">Sorte: <span id="sorte"></span></h2><br>
             </div>
             <div class="col-md-3">
-                <h2 class="center d-flex justify-content-end cor-forca">Força: <span id="forca"></span></h2><br>
-                <h2 class="center d-flex justify-content-end cor-destreza">Destreza: <span id="destreza"></span></h2><br>
-                <h2 class="center d-flex justify-content-end cor-constituicao">Constituição: <span id="constituicao"></span></h2><br>
-                <h2 class="center d-flex justify-content-end cor-perspicaz">Perspicácia: <span id="perspicacia"></span></h2><br>
+                <h2 class="center d-flex justify-content-start cor-forca">Força: <span id="forca"></span></h2><br>
+                <h2 class="center d-flex justify-content-start cor-destreza">Destreza: <span id="destreza"></span></h2><br>
+                <h2 class="center d-flex justify-content-start cor-constituicao">Constituição: <span id="constituicao"></span></h2><br>
+                <h2 class="center d-flex justify-content-start cor-perspicaz">Perspicácia: <span id="perspicacia"></span></h2><br>
             </div>
             <div class="col-md-4">
             </div>
@@ -84,42 +84,16 @@
     </div>
     <div class="ficha bordinha-dois cor-fundo ">
         <h1 class="center letra-medieval">Habilidades: </h1><br><br>
-        <div class="row">
-            <div class="col-md-4" id="col-ataque">
-                <h4 class="center">Ataque</h4>
-            </div>
-            <div class="col-md-4" id="col-vantagem">
-                <h4 class="center" >Vatagem/Dano</h4>
-            </div>
-            <div class="col-md-4" id="col-custo">
-                <h4 class="center">Custo</h4>
-            </div>
+        <div id="ataques">
         </div>
     </div>
     <div class="ficha bordinha-dois cor-fundo ">
+        <h4 class="center letra-medieval">Moedas: <span id="moedas"></span></h4>
+    </div>
+    <div class="ficha bordinha-dois cor-fundo ">
         <h1 class="center letra-medieval">Inventário: <span id="nome"></span></h1><br><br>
-        <table class="table table-dark tabela">
-            <thead>
-                <tr>
-                    <th scope="col">
-                        <h2 class="center letra-medieval tabela">Item:</h2>
-                    </th>
-                    <th scope="col">
-                        <h2 class="center letra-medieval tabela">Vatagem/Dano</h2>
-                    </th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>
-                        <h3 class="center tabela">Espada de Metal</h3>
-                    </td>
-                    <td>
-                        <h3 class="center tabela">D5<h3>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <div id="inventario">
+        </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
