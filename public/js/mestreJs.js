@@ -202,6 +202,7 @@ function sendUpdate() {
             moedas: parseInt($("#moedas" + i).val()),
             inventario: inventario
         };
+    console.log(jogador);
         $.ajax({
             type: "PUT",
             url: "https://adventure-master.herokuapp.com/api/jogadores/" + i,
@@ -209,9 +210,9 @@ function sendUpdate() {
             dataType: "json",
             contentType: "application/json",
             success: function(response) {
-                console.log(response);
             }
-        })
+        });
+        socket.emit('update', jogador);
     }
 }
 
@@ -243,7 +244,6 @@ function salvar() {
         moedas: parseInt($("#moedas" + i).val()),
         inventario: inventario
     };
-    console.log(jogador);
     $.ajax({
         type: "PUT",
         url: "https://adventure-master.herokuapp.com/api/jogadores/" + i,
