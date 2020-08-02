@@ -154,10 +154,9 @@ function removeAtaque(idJogador, ataqueNum) {
 
 
 function sendUpdate() {
-    sleep(200);
     var ataques = [];
-    var inventario = [];
     for (let i = 1; i <= 4; i++) {
+    var inventario = [];
         var array1 = $(".ataque" + i).text().split(".");
         for (let j = 0; j < (array1.length - 1); j++) {
             const element = array1[j];
