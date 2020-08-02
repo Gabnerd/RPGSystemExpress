@@ -151,8 +151,6 @@ function removeAtaque(idJogador, ataqueNum) {
     $("#ataques" + idJogador + " #ataque" + ataqueNum).remove();
     sendUpdate();
 }
-
-
 function sendUpdate() {
     for (let i = 1; i <= 4; i++) {
     var ataques = [];
