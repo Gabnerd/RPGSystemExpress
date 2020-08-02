@@ -4,7 +4,7 @@
         "nome": "Galrod",
         "vida": {
             "maximo": 10,
-            "atual": 9
+            "atual": 10
         },
         "mana": {
             "maximo": 1,
@@ -27,15 +27,13 @@
         "perspicacia": 52,
         "carisma": 32,
         "level": 2,
-        "sorte":50,
         "ataques": [
             {
                 "nome": "Cegar em área",
-                "atributos": "Alcance: 15m - Não gasta rodada - Uso único por luta",
-                "Custo": ""
+                "atributos": "Alcance: 15m - Não gasta rodada - Uso único por luta"
             }
         ],
-        "moedas": 1300,
+        "moedas": 1000,
         "inventario": [
             {
                 "nome": "Botas levianas",
@@ -56,6 +54,10 @@
             {
                 "nome": "Anel Brilhante",
                 "atributo": ""
+            },
+            {
+                "nome": "Rubis Brilhantes vermelhos",
+                "atributo": "5 rubis"
             }
         ]
     },
@@ -87,31 +89,25 @@
         "perspicacia": 20,
         "carisma": 30,
         "level": 2,
-        "sorte":50,
         "ataques": [
             {
                 "nome": "Magia de Ilusão",
-                "atributos": "Tira rodadas do inimigo dependendo do resultado",
-                "Custo": "4 mana"
+                "atributos": "Tira rodadas do inimigo dependendo do resultado"
             },
             {
                 "nome": "Lanterna",
-                "atributos": "Ilumina ate 5M",
-                "Custo": "1 mana"
+                "atributos": "Ilumina ate 5M"
             },
             {
                 "nome": "Pele de mana",
-                "atributos": "2 de armadura",
-                "Custo": "4 mana"
+                "atributos": "2 de armadura"
             },
             {
                 "nome": "Pocao de cura Transforma agua em pocao",
-                "atributos": "D3 De cura",
-                "Custo": "4 mana"
+                "atributos": "D3 De cura"
             }
-
         ],
-        "moedas": 650,
+        "moedas": 4650,
         "inventario": [
             {
                 "nome": "Medalhão Azul ",
@@ -123,7 +119,19 @@
             },
             {
                 "nome": "3 Potes de Agua",
-                "atributo": "1 Pote Cheio, 2 Vazio"
+                "atributo": "1 Pote Cheio"
+            },
+            {
+                "nome": "Rubis Brilhantes vermelhos",
+                "atributo": "20 Rubis"
+            },
+            {
+                "nome": "Anel Brilhante",
+                "atributo": ""
+            },
+            {
+                "nome": "Rubis Brilhantes vermelhos",
+                "atributo": "5 rubis"
             }
         ]
     },
@@ -136,7 +144,7 @@
         },
         "mana": {
             "maximo": 15,
-            "atual": 11
+            "atual": 15
         },
         "movimento": 6,
         "primeSocor": 8,
@@ -156,34 +164,28 @@
         "destreza": 44,
         "constituicao": 36,
         "inteligencia": 24,
-        "perspicacia": 51,
+        "perspicacia": 52,
         "carisma": 17,
         "level": 3,
-        "sorte":50,
         "ataques": [
             {
                 "nome": "Ataque do Pet",
-                "atributos": "D3 Gelo 20 Metros - Nao gasta rodada",
-                "Custo": "2 Mana"
+                "atributos": "D3 Gelo 20 Metros - Nao gasta rodada"
             },
             {
                 "nome": "Pele de mana",
-                "atributos": "2 de armadura",
-                "Custo": "4 mana"
+                "atributos": "2 de armadura"
             },
             {
                 "nome": "Bloquear",
-                "atributos": "3 de armadura",
-                "Custo": "Ser Atacado"
+                "atributos": "3 de armadura"
             },
-            
             {
                 "nome": "Cura",
-                "atributos": " D4 de cura ",
-                "Custo":"5 Mana"
+                "atributos": " D4 de cura "
             }
         ],
-        "moedas": 100,
+        "moedas": 3600,
         "inventario": [
             {
                 "nome": "Botas levianas",
@@ -196,6 +198,14 @@
             {
                 "nome": "Anel Brilhante",
                 "atributo": ""
+            },
+            {
+                "nome": "Anel Brilhante",
+                "atributo": ""
+            },
+            {
+                "nome": "Rubis Brilhantes vermelhos",
+                "atributo": "5 rubis"
             }
         ]
     },
@@ -207,12 +217,12 @@
             "atual": 11
         },
         "mana": {
-            "maximo": 13,
-            "atual": 13
+            "maximo": 14,
+            "atual": 14
         },
         "movimento": 5,
         "primeSocor": 12,
-        "sanidade": 45,
+        "sanidade": 44,
         "exposicao": [
             {
                 "inimigo": "Goblin",
@@ -223,34 +233,33 @@
                 "valor": 2
             }
         ],
-        "luta": 46,
+        "luta": 44,
         "forca": 32,
         "destreza": 50,
         "constituicao": 16,
         "inteligencia": 22,
-        "perspicacia": 12,
+        "perspicacia": 20,
         "carisma": 12,
         "level": 3,
-        "sorte":50,
         "ataques": [
             {
                 "nome": "Soco Flamejante",
-                "atributos": "D4 + 2",
-                "Custo": "8 mana"
+                "atributos": "D4 + 2"
             },
             {
                 "nome": "Lanca Chamas - 2m",
-                "atributos": "D3 + 2",
-                "Custo": "3 Mana"
+                "atributos": "D3 + 2"
             },
             {
                 "nome": "Pele de mana",
-                "atributos": "2 de armadura",
-                "Custo": "4 mana"
+                "atributos": "2 de armadura"
+            },
+            {
+                "nome": "Cura",
+                "atributos": " D4 de cura "
             }
-         
         ],
-        "moedas": 0,
+        "moedas": 3050,
         "inventario": [
             {
                 "nome": "Anel vermelho",
@@ -267,6 +276,14 @@
             {
                 "nome": "Bracelete de ferro",
                 "atributo": "+3 se atacado no braco"
+            },
+            {
+                "nome": "Armadura",
+                "atributo": " + 1 Defesa"
+            },
+            {
+                "nome": "Rubis Brilhantes vermelhos",
+                "atributo": "6 rubis"
             }
         ]
     }

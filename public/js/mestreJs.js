@@ -60,7 +60,7 @@ $.ajax({
                 let inventario = jogador.inventario[i];
                 $("#inventario" + jogador.id).append(
                     "<li id=\"item" + itemConters + "\">" +
-                    "<p class=\"inventarioItem" + jogador.id + " lineItem\">" + inventario.nome + ", " + inventario.atributo + ".</p> <button onClick=\"removeItem(" + jogador.id + "," + ataqueConters + ")\" class=\"btn btn-outline-secondary btn-remove lineItem\">-</button>" +
+                    "<p class=\"inventarioItem" + jogador.id + " lineItem\">" + inventario.nome + ", " + inventario.atributo + ".</p> <button onClick=\"removeItem(" + jogador.id + "," + itemConters + ")\" class=\"btn btn-outline-secondary btn-remove lineItem\">-</button>" +
                     "</li>"
                 );
                 itemConters++;
@@ -144,13 +144,11 @@ $.ajax({
 
 function removeItem(idJogador, itemNum) {
     $("#inventario" + idJogador + " #item" + itemNum).remove();
-    itemConters--;
     sendUpdate();
 }
 
 function removeAtaque(idJogador, ataqueNum) {
     $("#ataques" + idJogador + " #ataque" + ataqueNum).remove();
-    ataqueConters--;
     sendUpdate();
 }
 

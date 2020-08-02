@@ -1,2 +1,2 @@
 var socket;
-socket = io.connect('http://adventure-master.herokuapp.com');
+socket = io.connect('https://adventure-master.herokuapp.com');
