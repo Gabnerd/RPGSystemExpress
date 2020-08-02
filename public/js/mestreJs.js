@@ -76,7 +76,7 @@ $.ajax({
             $("#itemAdd" + jogador.id).click(function() {
                 $("#inventario" + jogador.id).append(
                     "<li id=\"item" + itemConters + "\">" +
-    "<p class=\"inventarioItem" + jogador.id + " lineItem\">" + $("#newItem" + jogador.id).val() + ", " + $("#newItemAtributo" + jogador.id).val() + ".</p> <button onClick=\"removeItem(" + jogador.id + "," + itemConters + ");sendUpdate();\" class=\"btn btn-outline-secondary btn-remove lineItem\">-</button>" +
+                    "<p class=\"inventarioItem" + jogador.id + " lineItem\">" + $("#newItem" + jogador.id).val() + ", " + $("#newItemAtributo" + jogador.id).val() + ".</p> <button onClick=\"removeItem(" + jogador.id + "," + itemConters + ");sendUpdate();\" class=\"btn btn-outline-secondary btn-remove lineItem\">-</button>" +
                     "</li>"
                 );
                 sendUpdate();
@@ -201,6 +201,7 @@ function sendUpdate() {
             moedas: parseInt($("#moedas" + i).val()),
             inventario: inventario
         };
+        console.log(i);
     console.log(jogador);
         $.ajax({
             type: "PUT",
