@@ -201,7 +201,7 @@ function sendUpdate() {
             moedas: parseInt($("#moedas" + i).val()),
             inventario: inventario
         };
-        console.log(i);
+        console.log(inventario);
     console.log(jogador);
         $.ajax({
             type: "PUT",
