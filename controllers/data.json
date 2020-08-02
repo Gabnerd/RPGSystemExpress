@@ -16,40 +16,32 @@
         "exposicao": [
             {
                 "inimigo": "Goblin",
-                "valor": 0
+                "valor": 1
             }
         ],
-        "luta": 40,
+        "luta": 48,
         "forca": 36,
         "destreza": 60,
         "constituicao": 32,
-        "inteligencia": 36,
+        "inteligencia": 42,
         "perspicacia": 52,
         "carisma": 32,
-        "level": 2,
+        "level": 4,
         "ataques": [
             {
                 "nome": "Cegar em área",
                 "atributos": "Alcance: 15m - Não gasta rodada - Uso único por luta"
             }
         ],
-        "moedas": 1000,
+        "moedas": 0,
         "inventario": [
             {
                 "nome": "Botas levianas",
                 "atributo": " + 2 movimento"
             },
             {
-                "nome": "Faca",
-                "atributo": "D5"
-            },
-            {
                 "nome": "Arco e Flecha",
                 "atributo": "D3"
-            },
-            {
-                "nome": "Rubis Brilhantes vermelhos",
-                "atributo": "20 Rubis"
             },
             {
                 "nome": "Anel Brilhante",
@@ -58,6 +50,14 @@
             {
                 "nome": "Rubis Brilhantes vermelhos",
                 "atributo": "5 rubis"
+            },
+            {
+                "nome": "Faca",
+                "atributo": "D5"
+            },
+            {
+                "nome": "Armadura p Frio",
+                "atributo": "2 de Armadura"
             }
         ]
     },
@@ -78,21 +78,25 @@
         "exposicao": [
             {
                 "inimigo": "Goblin",
-                "valor": 0
+                "valor": 1
             }
         ],
         "luta": 50,
-        "forca": 44,
+        "forca": 48,
         "destreza": 50,
         "constituicao": 34,
         "inteligencia": 28,
-        "perspicacia": 20,
+        "perspicacia": 24,
         "carisma": 30,
-        "level": 2,
+        "level": 4,
         "ataques": [
             {
                 "nome": "Magia de Ilusão",
                 "atributos": "Tira rodadas do inimigo dependendo do resultado"
+            },
+            {
+                "nome": "",
+                "atributos": "4 de mana"
             },
             {
                 "nome": "Lanterna",
@@ -103,11 +107,19 @@
                 "atributos": "2 de armadura"
             },
             {
+                "nome": "",
+                "atributos": "4 de mana"
+            },
+            {
                 "nome": "Pocao de cura Transforma agua em pocao",
                 "atributos": "D3 De cura"
+            },
+            {
+                "nome": "",
+                "atributos": "4 de mana"
             }
         ],
-        "moedas": 4650,
+        "moedas": 2400,
         "inventario": [
             {
                 "nome": "Medalhão Azul ",
@@ -123,15 +135,15 @@
             },
             {
                 "nome": "Rubis Brilhantes vermelhos",
-                "atributo": "20 Rubis"
-            },
-            {
-                "nome": "Anel Brilhante",
-                "atributo": ""
-            },
-            {
-                "nome": "Rubis Brilhantes vermelhos",
                 "atributo": "5 rubis"
+            },
+            {
+                "nome": "Armadura p Frio",
+                "atributo": "2 de Armadura"
+            },
+            {
+                "nome": "Armadura p Frio",
+                "atributo": "2 de Armadura"
             }
         ]
     },
@@ -152,7 +164,7 @@
         "exposicao": [
             {
                 "inimigo": "Goblin",
-                "valor": 1
+                "valor": 2
             },
             {
                 "inimigo": "Demonio",
@@ -160,14 +172,18 @@
             }
         ],
         "luta": 52,
-        "forca": 44,
-        "destreza": 44,
+        "forca": 54,
+        "destreza": 48,
         "constituicao": 36,
         "inteligencia": 24,
         "perspicacia": 52,
         "carisma": 17,
-        "level": 3,
+        "level": 4,
         "ataques": [
+            {
+                "nome": "Cura",
+                "atributos": " D4 de cura "
+            },
             {
                 "nome": "Ataque do Pet",
                 "atributos": "D3 Gelo 20 Metros - Nao gasta rodada"
@@ -177,35 +193,47 @@
                 "atributos": "2 de armadura"
             },
             {
+                "nome": "",
+                "atributos": "4 de Mana"
+            },
+            {
                 "nome": "Bloquear",
                 "atributos": "3 de armadura"
             },
             {
                 "nome": "Cura",
-                "atributos": " D4 de cura "
+                "atributos": "D4 de cura"
+            },
+            {
+                "nome": "",
+                "atributos": "4 de mana"
             }
         ],
-        "moedas": 3600,
+        "moedas": 1500,
         "inventario": [
-            {
-                "nome": "Botas levianas",
-                "atributo": " + 4 movimento"
-            },
-            {
-                "nome": "Faca",
-                "atributo": "D5"
-            },
-            {
-                "nome": "Anel Brilhante",
-                "atributo": ""
-            },
-            {
-                "nome": "Anel Brilhante",
-                "atributo": ""
-            },
             {
                 "nome": "Rubis Brilhantes vermelhos",
                 "atributo": "5 rubis"
+            },
+            {
+                "nome": "Katana",
+                "atributo": "D6- Lamina de Rubi"
+            },
+            {
+                "nome": "Rubis Vermelhos",
+                "atributo": "3 Rubis"
+            },
+            {
+                "nome": "Armadura p Frio",
+                "atributo": "2 de armadura"
+            },
+            {
+                "nome": "Armadura p Frio",
+                "atributo": "2 de Armadura"
+            },
+            {
+                "nome": "Armadura p Frio",
+                "atributo": "2 de Armadura"
             }
         ]
     },
@@ -233,41 +261,49 @@
                 "valor": 2
             }
         ],
-        "luta": 44,
+        "luta": 52,
         "forca": 32,
         "destreza": 50,
-        "constituicao": 16,
+        "constituicao": 24,
         "inteligencia": 22,
         "perspicacia": 20,
         "carisma": 12,
-        "level": 3,
+        "level": 4,
         "ataques": [
-            {
-                "nome": "Soco Flamejante",
-                "atributos": "D4 + 2"
-            },
-            {
-                "nome": "Lanca Chamas - 2m",
-                "atributos": "D3 + 2"
-            },
             {
                 "nome": "Pele de mana",
                 "atributos": "2 de armadura"
             },
             {
+                "nome": "Soco Flamejante D4+2",
+                "atributos": "8 de mana"
+            },
+            {
+                "nome": "Lanca Chamas D3+2",
+                "atributos": "3 de mana"
+            },
+            {
+                "nome": "Pele de Mana - 2 Armadura",
+                "atributos": "4 de Mana"
+            },
+            {
+                "nome": "Bloquear",
+                "atributos": "3 de armadura"
+            },
+            {
                 "nome": "Cura",
-                "atributos": " D4 de cura "
+                "atributos": "D4 de cura"
+            },
+            {
+                "nome": "",
+                "atributos": "4 de mana"
             }
         ],
-        "moedas": 3050,
+        "moedas": 1000,
         "inventario": [
             {
                 "nome": "Anel vermelho",
                 "atributo": " + 1 vida"
-            },
-            {
-                "nome": "Machado de combate",
-                "atributo": "D5"
             },
             {
                 "nome": "Cristal de mana - Uso unico",
@@ -278,12 +314,16 @@
                 "atributo": "+3 se atacado no braco"
             },
             {
-                "nome": "Armadura",
-                "atributo": " + 1 Defesa"
+                "nome": "Armadura p Frio",
+                "atributo": " 2 de Armadura"
             },
             {
-                "nome": "Rubis Brilhantes vermelhos",
-                "atributo": "6 rubis"
+                "nome": "Machado de Combate",
+                "atributo": "D6 - Lamina de Rubi"
+            },
+            {
+                "nome": "Armadura p Frio",
+                "atributo": "2 de Armadura"
             }
         ]
     }
