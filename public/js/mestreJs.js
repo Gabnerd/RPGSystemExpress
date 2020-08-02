@@ -209,7 +209,7 @@ function sendUpdate() {
             dataType: "json",
             contentType: "application/json",
             success: function(response) {
-
+                console.log(response);
             }
         })
     }

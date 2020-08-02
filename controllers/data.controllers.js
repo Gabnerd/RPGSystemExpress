@@ -1,6 +1,5 @@
 const fs = require('jsonfile');
 var jogadores = require('./data.json');
-const { Console } = require('console');
 
 exports.create = function(req, res) {
     var newPlayer = req.body;
@@ -37,8 +36,7 @@ exports.update = function(req, res) {
         const fs2 = require('fs')
         fs2.truncate('./controllers/data.json', 0, function() { fs.writeFile('./controllers/data.json', jogadores); });
         fs.writeFile('./controllers/data.json', jogadores);
-        Console.log(jogadores);
-        res.end("put efetuado com sucesso!");
+        res.end("put efetuado com sucesso! \n"+JSON.stringify(jogadores));
     } else {
         res.end("Don't Exist Customer:\n:" + JSON.stringify(updatedPlayer, null, 4));
     }
