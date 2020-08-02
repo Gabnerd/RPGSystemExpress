@@ -144,6 +144,7 @@ $.ajax({
 
 function removeItem(idJogador, itemNum) {
     $("#inventario" + idJogador + " #item" + itemNum).remove();
+    itemConters--;
 }
 
 function removeAtaque(idJogador, ataqueNum) {
@@ -153,6 +154,7 @@ function removeAtaque(idJogador, ataqueNum) {
 
 
 function sendUpdate() {
+    sleep(200);
     var ataques = [];
     var inventario = [];
     for (let i = 1; i <= 4; i++) {
@@ -165,9 +167,9 @@ function sendUpdate() {
                 atributos: array2[1]
             }
         }
-        var array2 = $(".inventarioItem" + i).text().split(".");
-        for (let j = 0; j < (array2.length - 1); j++) {
-            const element = array2[j];
+        var array4 = $(".inventarioItem" + i).text().split(".");
+        for (let j = 0; j < (array4.length - 1); j++) {
+            const element = array4[j];
             var array3 = element.split(", ");
             inventario[j] = {
                 nome: array3[0],
@@ -260,3 +262,6 @@ function salvar() {
 function getExposicao(exposicao, index, idJogador) {
     $("#valorExposicao" + idJogador).val(exposicao[index].valor);
 }
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
