@@ -52,7 +52,7 @@ $.ajax({
                 let ataque = jogador.ataques[i];
                 $("#ataques" + jogador.id).append(
                     "<li id=\"ataque" + ataqueConters + "\">" +
-                    "<p class=\"ataque" + jogador.id + " lineItem\">" + ataque.nome + ", " + ataque.atributos + ".</p> <button onClick=\"removeAtaque(" + jogador.id + "," + ataqueConters + ")\" class=\"btn btn-outline-secondary btn-remove lineItem\">-</button>" +
+                    "<p class=\"ataque" + jogador.id + " lineItem\">" + ataque.nome + ", " + ataque.atributos + ", " + ataque.custo + ".</p> <button onClick=\"removeAtaque(" + jogador.id + "," + ataqueConters + ")\" class=\"btn btn-outline-secondary btn-remove lineItem\">-</button>" +
                     "</li>");
                 ataqueConters++;
             }
