@@ -37,7 +37,7 @@ $.ajax({
                 "<p>Ataques: </p>" +
                 "<ul id=\"ataques" + jogador.id + "\">" +
                 "</ul>" +
-                "<p>Nome: <input id=\"newAtaque" + jogador.id + "\">, Atributo: <input id=\"newAtaqueAtributo" + jogador.id + "\"> <button id=\"ataqueAdd" + jogador.id + "\" class=\"btn btn-outline-secondary btn-add\">+</button></p>" +
+                "<p>Nome: <input id=\"newAtaque" + jogador.id + "\">, Atributo: <input id=\"newAtaqueAtributo" + jogador.id + "\">, Custo: <input id=\"newAtaqueCusto" + jogador.id + "\"> <button id=\"ataqueAdd" + jogador.id + "\" class=\"btn btn-outline-secondary btn-add\">+</button></p>" +
                 "</div>" +
                 "<p>Moedas <input onChange=\"sendUpdate()\" id=\"moedas" + jogador.id + "\" type=\"text\" value=\"" + jogador.moedas + "\" size=\"1\"></p>" +
                 "<div>" +
@@ -68,7 +68,7 @@ $.ajax({
             $("#ataqueAdd" + jogador.id).click(function() {
                 $("#ataques" + jogador.id).append(
                     "<li id=\"ataque" + ataqueConters + "\">" +
-                    "<p class=\"ataque" + jogador.id + " lineItem\">" + $("#newAtaque" + jogador.id).val() + ", " + $("#newAtaqueAtributo" + jogador.id).val() + ".</p> <button onClick=\"removeAtaque(" + jogador.id + "," + ataqueConters + ")\" class=\"btn btn-outline-secondary btn-remove lineItem\">-</button>" +
+                    "<p class=\"ataque" + jogador.id + " lineItem\">" + $("#newAtaque" + jogador.id).val() + ", " + $("#newAtaqueAtributo" + jogador.id).val() + ", " + $("#newAtaqueCusto" + jogador.id).val() + ".</p> <button onClick=\"removeAtaque(" + jogador.id + "," + ataqueConters + ")\" class=\"btn btn-outline-secondary btn-remove lineItem\">-</button>" +
                     "</li>");
                 sendUpdate();
                 ataqueConters++;
@@ -151,17 +151,19 @@ function removeAtaque(idJogador, ataqueNum) {
     $("#ataques" + idJogador + " #ataque" + ataqueNum).remove();
     sendUpdate();
 }
+
 function sendUpdate() {
     for (let i = 1; i <= 4; i++) {
-    var ataques = [];
-    var inventario = [];
+        var ataques = [];
+        var inventario = [];
         var array1 = $(".ataque" + i).text().split(".");
         for (let j = 0; j < (array1.length - 1); j++) {
             const element = array1[j];
             var array2 = element.split(", ");
             ataques[j] = {
                 nome: array2[0],
-                atributos: array2[1]
+                atributos: array2[1],
+                custo: array2[2]
             }
         }
         var array4 = $(".inventarioItem" + i).text().split(".");
@@ -201,15 +203,14 @@ function sendUpdate() {
             inventario: inventario
         };
         console.log(inventario);
-    console.log(jogador);
+        console.log(jogador);
         $.ajax({
             type: "PUT",
             url: "https://adventure-master.herokuapp.com/api/jogadores/" + i,
             data: JSON.stringify(jogador),
             dataType: "json",
             contentType: "application/json",
-            success: function(response) {
-            }
+            success: function(response) {}
         });
         socket.emit('update', jogador);
     }
@@ -259,6 +260,7 @@ function salvar() {
 function getExposicao(exposicao, index, idJogador) {
     $("#valorExposicao" + idJogador).val(exposicao[index].valor);
 }
+
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
-  }
+}
