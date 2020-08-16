@@ -13,12 +13,10 @@
         "movimento": 11,
         "primeSocor": 20,
         "sanidade": 25,
-        "exposicao": [
-            {
-                "inimigo": "Goblin",
-                "valor": 1
-            }
-        ],
+        "exposicao": [{
+            "inimigo": "Goblin",
+            "valor": 1
+        }],
         "luta": 48,
         "forca": 36,
         "destreza": 60,
@@ -27,15 +25,13 @@
         "perspicacia": 52,
         "carisma": 32,
         "level": 4,
-        "ataques": [
-            {
-                "nome": "Cegar em área",
-                "atributos": "Alcance: 15m - Não gasta rodada - Uso único por luta"
-            }
-        ],
+        "ataques": [{
+            "nome": "Cegar em área",
+            "atributos": "Alcance: 15m - Não gasta rodada - Uso único por luta",
+            "custo": "undefined"
+        }],
         "moedas": 0,
-        "inventario": [
-            {
+        "inventario": [{
                 "nome": "Botas levianas",
                 "atributo": " + 2 movimento"
             },
@@ -75,12 +71,10 @@
         "movimento": 6,
         "primeSocor": 3,
         "sanidade": 45,
-        "exposicao": [
-            {
-                "inimigo": "Goblin",
-                "valor": 1
-            }
-        ],
+        "exposicao": [{
+            "inimigo": "Goblin",
+            "valor": 1
+        }],
         "luta": 50,
         "forca": 48,
         "destreza": 50,
@@ -89,39 +83,29 @@
         "perspicacia": 24,
         "carisma": 30,
         "level": 4,
-        "ataques": [
-            {
+        "ataques": [{
                 "nome": "Magia de Ilusão",
-                "atributos": "Tira rodadas do inimigo dependendo do resultado"
-            },
-            {
-                "nome": "",
-                "atributos": "4 de mana"
+                "atributos": " Tira rodadas do inimigo dependendo do resultado",
+                "custo": "4 de mana"
             },
             {
                 "nome": "Lanterna",
-                "atributos": "Ilumina ate 5M"
+                "atributos": "Ilumina ate 5M",
+                "custo": "1 de mana"
             },
             {
                 "nome": "Pele de mana",
-                "atributos": "2 de armadura"
+                "atributos": "2 de armadura",
+                "custo": "4 de mana"
             },
             {
-                "nome": "",
-                "atributos": "4 de mana"
-            },
-            {
-                "nome": "Pocao de cura Transforma agua em pocao",
-                "atributos": "D3 De cura"
-            },
-            {
-                "nome": "",
-                "atributos": "4 de mana"
+                "nome": "Pocao de cura",
+                "atributos": "Transforma agua em pocao",
+                "custo": "D3 De cura"
             }
         ],
         "moedas": 2400,
-        "inventario": [
-            {
+        "inventario": [{
                 "nome": "Medalhão Azul ",
                 "atributo": " + 1 Mana"
             },
@@ -136,10 +120,6 @@
             {
                 "nome": "Rubis Brilhantes vermelhos",
                 "atributo": "5 rubis"
-            },
-            {
-                "nome": "Armadura p Frio",
-                "atributo": "2 de Armadura"
             },
             {
                 "nome": "Armadura p Frio",
@@ -161,8 +141,7 @@
         "movimento": 6,
         "primeSocor": 8,
         "sanidade": 35,
-        "exposicao": [
-            {
+        "exposicao": [{
                 "inimigo": "Goblin",
                 "valor": 2
             },
@@ -179,39 +158,44 @@
         "perspicacia": 52,
         "carisma": 17,
         "level": 4,
-        "ataques": [
+        "ataques": [{
+                "nome": "Bloquear",
+                "atributos": "3 de armadura",
+                "custo": "undefined"
+            },
             {
                 "nome": "Cura",
-                "atributos": " D4 de cura "
+                "atributos": "D4 de cura",
+                "custo": "undefined"
+            },
+            {
+                "nome": "",
+                "atributos": "4 de mana",
+                "custo": "undefined"
+            },
+            {
+                "nome": "Magia Cura",
+                "atributos": "D4 de cura",
+                "custo": "5 mana"
             },
             {
                 "nome": "Ataque do Pet",
-                "atributos": "D3 Gelo 20 Metros - Nao gasta rodada"
+                "atributos": "D3 Gelo 20 Metros",
+                "custo": "Nao gasta rodada 1 de mana"
             },
             {
                 "nome": "Pele de mana",
-                "atributos": "2 de armadura"
-            },
-            {
-                "nome": "",
-                "atributos": "4 de Mana"
+                "atributos": "2 de armadura,",
+                "custo": "4 de mana"
             },
             {
                 "nome": "Bloquear",
-                "atributos": "3 de armadura"
-            },
-            {
-                "nome": "Cura",
-                "atributos": "D4 de cura"
-            },
-            {
-                "nome": "",
-                "atributos": "4 de mana"
+                "atributos": "3 de armadura",
+                "custo": "Ser atacado"
             }
         ],
         "moedas": 1500,
-        "inventario": [
-            {
+        "inventario": [{
                 "nome": "Rubis Brilhantes vermelhos",
                 "atributo": "5 rubis"
             },
@@ -226,14 +210,6 @@
             {
                 "nome": "Armadura p Frio",
                 "atributo": "2 de armadura"
-            },
-            {
-                "nome": "Armadura p Frio",
-                "atributo": "2 de Armadura"
-            },
-            {
-                "nome": "Armadura p Frio",
-                "atributo": "2 de Armadura"
             }
         ]
     },
@@ -251,8 +227,7 @@
         "movimento": 5,
         "primeSocor": 12,
         "sanidade": 44,
-        "exposicao": [
-            {
+        "exposicao": [{
                 "inimigo": "Goblin",
                 "valor": 1
             },
@@ -269,39 +244,44 @@
         "perspicacia": 20,
         "carisma": 12,
         "level": 4,
-        "ataques": [
-            {
+        "ataques": [{
                 "nome": "Pele de mana",
-                "atributos": "2 de armadura"
+                "atributos": "2 de armadura",
+                "custo": "undefined"
             },
             {
                 "nome": "Soco Flamejante D4+2",
-                "atributos": "8 de mana"
+                "atributos": "8 de mana",
+                "custo": "undefined"
             },
             {
                 "nome": "Lanca Chamas D3+2",
-                "atributos": "3 de mana"
+                "atributos": "3 de mana",
+                "custo": "undefined"
             },
             {
                 "nome": "Pele de Mana - 2 Armadura",
-                "atributos": "4 de Mana"
+                "atributos": "4 de Mana",
+                "custo": "undefined"
             },
             {
                 "nome": "Bloquear",
-                "atributos": "3 de armadura"
+                "atributos": "3 de armadura",
+                "custo": "undefined"
             },
             {
                 "nome": "Cura",
-                "atributos": "D4 de cura"
+                "atributos": "D4 de cura",
+                "custo": "undefined"
             },
             {
                 "nome": "",
-                "atributos": "4 de mana"
+                "atributos": "4 de mana",
+                "custo": "undefined"
             }
         ],
         "moedas": 1000,
-        "inventario": [
-            {
+        "inventario": [{
                 "nome": "Anel vermelho",
                 "atributo": " + 1 vida"
             },

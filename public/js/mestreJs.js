@@ -158,8 +158,7 @@ function sendUpdate() {
         var inventario = [];
         var array1 = $(".ataque" + i).text().split(".");
         for (let j = 0; j < (array1.length - 1); j++) {
-            const element = array1[j];
-            var array2 = element.split(", ");
+            var array2 = array1[j].split(", ");
             ataques[j] = {
                 nome: array2[0],
                 atributos: array2[1],
