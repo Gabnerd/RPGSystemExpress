@@ -59,7 +59,9 @@ socket.on("update", getData);
 
 function getData() {
 
-    
+    $("#listExposicao").empty();
+    $("#ataques").empty();
+    $("#inventario").empty();
     $.ajax({
         type: "GET",
         url: "https://adventure-master.herokuapp.com/api/jogadores/"+nomeJogador,
