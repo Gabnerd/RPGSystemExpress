@@ -211,8 +211,8 @@ function sendUpdate() {
             contentType: "application/json",
             success: function(response) {}
         });
-        socket.emit('update', jogador);
     }
+    socket.emit('update', jogador);
 }
 
 function salvar() {

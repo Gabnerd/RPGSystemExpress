@@ -60,13 +60,7 @@ socket.on("update", getData);
 function getData() {
 
     $("#listExposicao").empty();
-    $("#listExposicao").empty();
-    $("#listExposicao").empty();
     $("#ataques").empty();
-    $("#ataques").empty();
-    $("#ataques").empty();
-    $("#inventario").empty();
-    $("#inventario").empty();
     $("#inventario").empty();
     $.ajax({
         type: "GET",
